@@ -4,6 +4,46 @@
 
 const activeDeals = [
   {
+    id: 34,
+    slug: 'honolulu-hawaii',
+    city: 'austin',
+    destination: 'Honolulu, Hawaii',
+    price: 400,
+    originalPrice: 750,
+    airline: 'American Airlines',
+    dates: 'Apr 2026',
+    route: 'AUS → HNL',
+    type: 'Domestic',
+    image: 'https://images.unsplash.com/photo-1542259009477-d625272157b7?w=800&auto=format&fit=crop',
+    tags: ['Oneworld', 'Island Paradise'],
+    savings: 47,
+    detectedAt: '2026-03-03T12:00:00Z',
+    status: 'active',
+    dealDetails: {
+      baggage: '1 carry-on, 1 personal item',
+      stops: '1 stop',
+      duration: '10h 40m',
+      bookingClass: 'Economy',
+      alliance: 'Oneworld (American Airlines)',
+    },
+    destinationInfo: {
+      visa: 'N/A (domestic)',
+      currency: 'USD',
+      bestTime: 'April–October (dry season on the south shore; winter brings big surf to the North Shore)',
+      topTips: [
+        'The Bus (Honolulu\'s public transit) costs $3 and connects the airport, Waikiki, and most attractions — skip the rental car if you\'re staying in Waikiki',
+        { text: 'Pearl Harbor requires advance reservations — book the USS Arizona Memorial months ahead, especially during spring and summer', attraction: 'Pearl Harbor' },
+        'Skip the tourist traps on Kalakaua Ave and eat where locals eat — try Ono Seafood for poke and Leonard\'s Bakery for malasadas',
+        'Diamond Head crater hike (1.6 miles roundtrip) offers panoramic views — go before 7am to beat the crowds and the heat',
+        'Hanauma Bay snorkeling requires advance online reservations ($25) — one of the best reefs on Oahu but spots fill up fast',
+      ],
+    },
+    verifiedDates: [
+      { outbound: 'Apr 14', return: 'Apr 21', length: 7, dayOfWeek: 'Tue' },
+      { outbound: 'Apr 21', return: 'Apr 28', length: 7, dayOfWeek: 'Tue' },
+    ],
+  },
+  {
     id: 33,
     slug: 'kahului-hawaii',
     city: 'dallas',
