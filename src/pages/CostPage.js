@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA, HotelCTA, EsimCTA } from '../components/Affiliates';
 import { findCostBySlug } from '../data/costData';
+import { SeoHead } from '../components/SeoHead';
 
 export default function CostPage() {
   const { slug } = useParams();
@@ -31,7 +32,12 @@ export default function CostPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={`${data.destination} Trip Cost Guide 2026`}
+        description={`How much does a trip to ${data.destination} really cost? Budget, mid-range, and comfortable daily spend breakdowns — accommodation, food, transport, and activities.`}
+        image={data.heroImage}
+      />
       {/* Hero */}
       <div className="relative h-56 md:h-72 overflow-hidden">
         <img src={data.heroImage} alt={data.destination} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -177,6 +183,6 @@ export default function CostPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

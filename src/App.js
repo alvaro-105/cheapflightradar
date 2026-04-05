@@ -26,6 +26,7 @@ import {
   PlaneTakeoff,
 } from 'lucide-react';
 import blogPosts from './data/blogPosts';
+import { SeoHead } from './components/SeoHead';
 
 // ── Page-level loading skeleton ───────────────────────────────
 const PageLoader = () => (
@@ -136,7 +137,7 @@ const BlogCard = memo(({ post }) => (
         <Clock size={11} />
         {post.readTime}
       </span>
-      <span>{formatDate(post.publishedAt)}</span>
+      <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
     </div>
   </Link>
 ));
@@ -175,13 +176,13 @@ const NewsletterSection = ({ variant = 'dark' }) => {
           Travel Tips Newsletter
         </span>
       </div>
-      <h3
+      <h2
         className={`text-xl font-bold mb-2 ${
           isLight ? 'text-gray-900' : 'text-white'
         }`}
       >
         Get weekly travel tips in your inbox
-      </h3>
+      </h2>
       <p
         className={`text-sm mb-5 leading-relaxed ${
           isLight ? 'text-gray-600' : 'text-gray-300'
@@ -197,12 +198,16 @@ const NewsletterSection = ({ variant = 'dark' }) => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <label htmlFor="newsletter-email" className="sr-only">Your email address</label>
           <input
+            id="newsletter-email"
+            name="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
+            aria-label="Your email address"
             className={`flex-1 rounded-lg px-4 py-2.5 text-sm border focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
               isLight
                 ? 'border-gray-200 bg-white text-gray-900'
@@ -270,12 +275,16 @@ const StickyEmailBar = () => {
                 </span>
               </div>
               <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto items-center">
+                <label htmlFor="sticky-email" className="sr-only">Your email address</label>
                 <input
+                  id="sticky-email"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
+                  aria-label="Your email address"
                   className="flex-1 sm:w-48 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
                 <button
@@ -534,7 +543,18 @@ const HomePage = () => {
   const [featuredPost, ...secondaryPosts] = featuredPosts;
 
   return (
-    <main>
+    <main id="main-content">
+      <SeoHead
+        title="Travel Smart. Spend Less."
+        description="Budget travel tips, destination guides, and flight deal alerts for curious travelers, wherever you're headed."
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'CheapFlightRadar',
+          url: 'https://www.cheapflightradar.com',
+          description: 'Budget travel tips, destination guides, and flight deal alerts for curious travelers.',
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -559,12 +579,14 @@ const HomePage = () => {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <button
+                type="button"
                 onClick={() => navigate('/blog')}
                 className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors flex items-center gap-2 shadow-lg"
               >
                 Browse All Posts <ArrowRight size={15} />
               </button>
               <button
+                type="button"
                 onClick={() => navigate('/blog?category=destination-guide')}
                 className="text-white/80 hover:text-white font-medium text-sm flex items-center gap-1.5 transition-colors"
               >
@@ -611,7 +633,7 @@ const HomePage = () => {
                 <p className="mt-3 text-gray-500 leading-relaxed line-clamp-3">{featuredPost.excerpt}</p>
                 <div className="mt-5 flex items-center gap-4 text-xs text-gray-400">
                   <span className="flex items-center gap-1.5"><Clock size={11} />{featuredPost.readTime}</span>
-                  <span>{formatDate(featuredPost.publishedAt)}</span>
+                  <time dateTime={featuredPost.publishedAt}>{formatDate(featuredPost.publishedAt)}</time>
                 </div>
               </div>
             </div>
@@ -699,7 +721,11 @@ const BlogListPage = () => {
       : blogPosts.filter((p) => p.category === activeCategory);
 
   return (
-    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
+    <main id="main-content" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
+      <SeoHead
+        title="Travel Blog"
+        description="Budget travel tips, destination guides, and real stories for curious travelers. Find cheap flights and make every dollar go further."
+      />
       {/* Page header */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-gray-900">All Posts</h1>
@@ -767,7 +793,25 @@ const BlogPostPage = () => {
     .slice(0, 3);
 
   return (
-    <main className="pb-24">
+    <main id="main-content" className="pb-24">
+      <SeoHead
+        title={post.title}
+        description={post.excerpt}
+        image={post.image}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.excerpt,
+          image: post.image,
+          datePublished: post.publishedAt,
+          dateModified: post.publishedAt,
+          author: { '@type': 'Organization', name: 'CheapFlightRadar', url: 'https://www.cheapflightradar.com' },
+          publisher: { '@type': 'Organization', name: 'CheapFlightRadar', url: 'https://www.cheapflightradar.com' },
+          mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.cheapflightradar.com/blog/${post.slug}` },
+        }}
+      />
       {/* Article header */}
       <div className="bg-gray-50 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -799,7 +843,7 @@ const BlogPostPage = () => {
               <Clock size={13} />
               {post.readTime}
             </span>
-            <span>{formatDate(post.publishedAt)}</span>
+            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             <div className="flex gap-2 flex-wrap">
               {post.tags.map((tag) => (
                 <span
@@ -868,7 +912,11 @@ const BlogPostPage = () => {
 
 // ==================== ABOUT PAGE ====================
 const AboutPage = () => (
-  <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-24">
+  <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-24">
+    <SeoHead
+      title="About CheapFlightRadar"
+      description="Budget travel tips and destination guides from the friend who always finds the cheap flight. Honest numbers, real budgets, no press trips."
+    />
     <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-4">About</p>
     <h1 className="text-4xl font-bold text-gray-900 mb-8 leading-tight">
       The friend who always finds<br />the cheap flight.
@@ -924,19 +972,6 @@ const AboutPage = () => (
       </p>
     </div>
 
-    <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-      {[
-        { stat: '320+', label: 'Destination & route pages' },
-        { stat: '$0', label: 'It costs to read any of it' },
-        { stat: '1', label: 'Rule: find the cheaper option' },
-      ].map(({ stat, label }) => (
-        <div key={stat} className="p-5 bg-gray-50 rounded-2xl">
-          <div className="text-3xl font-bold text-emerald-600 mb-1">{stat}</div>
-          <div className="text-sm text-gray-500">{label}</div>
-        </div>
-      ))}
-    </div>
-
     <div className="mt-12">
       <NewsletterSection variant="light" />
     </div>
@@ -947,6 +982,12 @@ const AboutPage = () => (
 const App = () => (
   <BrowserRouter>
     <ScrollToTop />
+    <a
+      href="#main-content"
+      className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[100] bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+    >
+      Skip to main content
+    </a>
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
       <StickyEmailBar />

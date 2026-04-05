@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheapFlightRadar Logos - Download Your Profile Pictures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #065f46 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .logo-card {
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo-preview {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-preview.dark {
+            background: #1e293b;
+        }
+
+        .logo-preview.light {
+            background: #f1f5f9;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .logo-desc {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 5px;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .instructions {
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .instructions h2 {
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .instructions ol {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .instructions strong {
+            color: #10b981;
+        }
+
+        /* Logo SVG styles */
+        .radar-logo {
+            width: 160px;
+            height: 160px;
+        }
+
+        @keyframes radar-pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        .radar-wave {
+            animation: radar-pulse 2s ease-in-out infinite;
+        }
+
+        .radar-wave:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .radar-wave:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes plane-move {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(2px) translateY(-2px); }
+        }
+
+        .plane {
+            animation: plane-move 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 CheapFlightRadar Logos</h1>
+        <p class="subtitle">Choose your favorite logo and download for social media profile pictures</p>
+
+        <div class="logos-grid">
+            <!-- Logo 1: Radar Circle with Plane -->
+            <div class="logo-card">
+                <div class="logo-preview dark" id="preview1">
+                    <svg class="radar-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Radar circles -->
+                        <circle class="radar-wave" cx="100" cy="100" r="80" fill="none" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+                        <circle class="radar-wave" cx="100" cy="100" r="60" fill="none" stroke="#10b981" stroke-width="2" opacity="0.4"/>
+                        <circle class="radar-wave" cx="100" cy="100" r="40" fill="none" stroke="#10b981" stroke-width="2" opacity="0.5"/>
+                        
+                        <!-- Center circle -->
+                        <circle cx="100" cy="100" r="85" fill="#10b981" opacity="0.1"/>
+                        
+                        <!-- Radar sweep line -->
+                        <line x1="100" y1="100" x2="100" y2="20" stroke="#10b981" stroke-width="2" opacity="0.6">
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 100 100"
+                                to="360 100 100"
+                                dur="4s"
+                                repeatCount="indefinite"/>
+                        </line>
+                        
+                        <!-- Airplane icon -->
+                        <g class="plane" transform="translate(100, 100)">
+                            <path d="M0,-25 L3,-20 L8,-20 L3,-15 L8,-5 L3,-5 L0,5 L-3,-5 L-8,-5 L-3,-15 L-8,-20 L-3,-20 Z" 
+                                  fill="#10b981" stroke="#059669" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="100" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" 
+                              fill="#10b981" text-anchor="middle">CFR</text>
+                    </svg>
+                </div>
+                <div class="logo-title">Radar Circle with Plane</div>
+                <div class="logo-desc">Animated radar waves with airplane. Best for most platforms.</div>
+                <button class="download-btn" onclick="downloadLogo('logo1', 'CheapFlightRadar-Logo-1.png')">Download PNG</button>
+                <button class="download-btn" onclick="downloadLogoSVG('logo1')">Download SVG</button>
+            </div>
+
+            <!-- Logo 2: Simple Radar Icon -->
+            <div class="logo-card">
+                <div class="logo-preview dark" id="preview2">
+                    <svg class="radar-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="90" fill="#10b981"/>
+                        
+                        <!-- Radar pattern -->
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="50" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.5"/>
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+                        
+                        <!-- Radar sweep -->
+                        <path d="M100,100 L100,30 A70,70 0 0,1 170,100 Z" fill="#ffffff" opacity="0.3">
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 100 100"
+                                to="360 100 100"
+                                dur="3s"
+                                repeatCount="indefinite"/>
+                        </path>
+                        
+                        <!-- Center dot -->
+                        <circle cx="100" cy="100" r="5" fill="#ffffff"/>
+                        
+                        <!-- Airplane -->
+                        <g transform="translate(130, 70) rotate(45)">
+                            <path d="M0,-8 L2,-6 L5,-6 L2,-4 L5,-1 L2,-1 L0,3 L-2,-1 L-5,-1 L-2,-4 L-5,-6 L-2,-6 Z" 
+                                  fill="#ffffff"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo-title">Simple Radar Badge</div>
+                <div class="logo-desc">Clean, professional radar icon. Great for all platforms.</div>
+                <button class="download-btn" onclick="downloadLogo('logo2', 'CheapFlightRadar-Logo-2.png')">Download PNG</button>
+                <button class="download-btn" onclick="downloadLogoSVG('logo2')">Download SVG</button>
+            </div>
+
+            <!-- Logo 3: Minimal Icon -->
+            <div class="logo-card">
+                <div class="logo-preview light" id="preview3">
+                    <svg class="radar-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Gradient background -->
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <rect width="200" height="200" rx="40" fill="url(#grad1)"/>
+                        
+                        <!-- Radar circles -->
+                        <circle cx="100" cy="100" r="60" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.2"/>
+                        <circle cx="100" cy="100" r="45" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4"/>
+                        
+                        <!-- Center -->
+                        <circle cx="100" cy="100" r="8" fill="#ffffff"/>
+                        
+                        <!-- Scanning line -->
+                        <line x1="100" y1="100" x2="100" y2="40" stroke="#ffffff" stroke-width="3" opacity="0.6" stroke-linecap="round">
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 100 100"
+                                to="360 100 100"
+                                dur="3s"
+                                repeatCount="indefinite"/>
+                        </line>
+                        
+                        <!-- Plane icon (larger) -->
+                        <g transform="translate(100, 60)">
+                            <path d="M0,-12 L3,-9 L7,-9 L3,-6 L7,-2 L3,-2 L0,5 L-3,-2 L-7,-2 L-3,-6 L-7,-9 L-3,-9 Z" 
+                                  fill="#ffffff" opacity="0.9"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo-title">Modern Gradient Badge</div>
+                <div class="logo-desc">Sleek gradient design with radar animation. Instagram-ready!</div>
+                <button class="download-btn" onclick="downloadLogo('logo3', 'CheapFlightRadar-Logo-3.png')">Download PNG</button>
+                <button class="download-btn" onclick="downloadLogoSVG('logo3')">Download SVG</button>
+            </div>
+
+            <!-- Logo 4: Text + Icon Combo -->
+            <div class="logo-card">
+                <div class="logo-preview dark" id="preview4">
+                    <svg class="radar-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <circle cx="100" cy="100" r="95" fill="#1e293b"/>
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="#10b981" stroke-width="2"/>
+                        
+                        <!-- Radar icon (top) -->
+                        <g transform="translate(100, 70)">
+                            <circle r="25" fill="none" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+                            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.5"/>
+                            <circle r="11" fill="none" stroke="#10b981" stroke-width="2" opacity="0.7"/>
+                            
+                            <!-- Plane -->
+                            <path d="M0,-8 L2,-6 L4,-6 L2,-4 L4,-1 L2,-1 L0,2 L-2,-1 L-4,-1 L-2,-4 L-4,-6 L-2,-6 Z" 
+                                  fill="#10b981"/>
+                        </g>
+                        
+                        <!-- Text -->
+                        <text x="100" y="125" font-family="Arial, sans-serif" font-size="22" font-weight="bold" 
+                              fill="#10b981" text-anchor="middle">CFR</text>
+                        <text x="100" y="145" font-family="Arial, sans-serif" font-size="10" font-weight="normal" 
+                              fill="#64748b" text-anchor="middle">CHEAP FLIGHTS</text>
+                    </svg>
+                </div>
+                <div class="logo-title">Text + Icon Badge</div>
+                <div class="logo-desc">Professional badge with CFR initials. Perfect for Twitter/X.</div>
+                <button class="download-btn" onclick="downloadLogo('logo4', 'CheapFlightRadar-Logo-4.png')">Download PNG</button>
+                <button class="download-btn" onclick="downloadLogoSVG('logo4')">Download SVG</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📱 How to Use These Logos</h2>
+            <ol>
+                <li><strong>Choose your favorite logo</strong> from the options above</li>
+                <li><strong>Download PNG</strong> for social media (Twitter, Instagram, TikTok, Facebook)</li>
+                <li><strong>Download SVG</strong> if you want to edit colors or resize without quality loss</li>
+                <li><strong>Upload to your social media:</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Instagram: Profile → Edit Profile → Change Profile Photo</li>
+                        <li>Twitter/X: Profile → Edit Profile → Change Profile Photo</li>
+                        <li>TikTok: Profile → Edit Profile → Change Photo</li>
+                        <li>Facebook Page: Page → Edit → Change Profile Picture</li>
+                    </ul>
+                </li>
+                <li><strong>Recommended:</strong> Logo 1 or Logo 2 work best on most platforms</li>
+            </ol>
+        </div>
+
+        <div class="instructions" style="margin-top: 30px;">
+            <h2>✅ Which Logo Should You Use?</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(100, 116, 139, 0.3);">
+                    <strong>Logo 1 (Radar Circle):</strong> Best all-around choice. Works on any background, has animation.
+                </li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(100, 116, 139, 0.3);">
+                    <strong>Logo 2 (Simple Badge):</strong> Most professional. Great for Twitter/X and LinkedIn.
+                </li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(100, 116, 139, 0.3);">
+                    <strong>Logo 3 (Gradient):</strong> Most eye-catching. Perfect for Instagram and TikTok.
+                </li>
+                <li style="padding: 10px 0;">
+                    <strong>Logo 4 (Text Badge):</strong> Most descriptive. Shows your CFR brand clearly.
+                </li>
+            </ul>
+            <p style="margin-top: 20px; color: #10b981; font-weight: 600;">
+                💡 Pro Tip: Use Logo 2 for Twitter/X, Logo 3 for Instagram, and Logo 1 for everything else!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function downloadLogo(logoId, filename) {
+            const previewMap = {
+                'logo1': 'preview1',
+                'logo2': 'preview2',
+                'logo3': 'preview3',
+                'logo4': 'preview4'
+            };
+            
+            const preview = document.getElementById(previewMap[logoId]);
+            const svg = preview.querySelector('svg');
+            
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 800;
+            canvas.height = 800;
+            
+            // Get background color
+            const bgColor = preview.classList.contains('light') ? '#f1f5f9' : '#1e293b';
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, 800, 800);
+            
+            // Convert SVG to data URL
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            const img = new Image();
+            img.onload = function() {
+                // Draw with padding
+                const padding = 100;
+                ctx.drawImage(img, padding, padding, 600, 600);
+                
+                // Download
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = filename;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(url);
+                });
+            };
+            img.src = url;
+        }
+
+        function downloadLogoSVG(logoId) {
+            const previewMap = {
+                'logo1': 'preview1',
+                'logo2': 'preview2',
+                'logo3': 'preview3',
+                'logo4': 'preview4'
+            };
+            
+            const preview = document.getElementById(previewMap[logoId]);
+            const svg = preview.querySelector('svg');
+            
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgData], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            
+            const link = document.createElement('a');
+            link.download = `CheapFlightRadar-Logo-${logoId}.svg`;
+            link.href = url;
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA, HotelCTA, EsimCTA } from '../components/Affiliates';
 import { findDestinationBySlug } from '../data/destinationData';
+import { SeoHead } from '../components/SeoHead';
 
 export default function DestinationPage() {
   const { slug } = useParams();
@@ -25,7 +26,12 @@ export default function DestinationPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={dest.metaTitle || `${dest.city} Travel Guide`}
+        description={dest.metaDesc || `Plan your trip to ${dest.city}, ${dest.country}. Budget tips, where to stay, what to eat, and how to get there.`}
+        image={dest.heroImage}
+      />
       {/* Hero */}
       <div className="relative h-80 md:h-[450px] overflow-hidden">
         <img src={dest.heroImage} alt={dest.city} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -277,6 +283,6 @@ export default function DestinationPage() {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

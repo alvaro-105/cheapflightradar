@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { HotelCTA, EsimCTA } from '../components/Affiliates';
 import { findRouteBySlug } from '../data/routeData';
 import affiliates from '../config/affiliates';
+import { SeoHead } from '../components/SeoHead';
 
 export default function RoutePage() {
   const { slug } = useParams();
@@ -21,7 +22,12 @@ export default function RoutePage() {
   const flightUrl = affiliates.kiwi.search(route.origin.iata, route.dest.iata);
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={`${route.origin.city} to ${route.dest.city} Flights`}
+        description={`Cheap flights from ${route.origin.city} (${route.origin.iata}) to ${route.dest.city}. Average round-trip from $${route.avgPrice.low}. Airlines, booking tips, and best time to fly.`}
+        image={route.image}
+      />
       {/* Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
         <img src={route.image} alt={route.dest.city} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -164,6 +170,6 @@ export default function RoutePage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

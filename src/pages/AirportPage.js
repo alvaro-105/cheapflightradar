@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA } from '../components/Affiliates';
 import { findAirportBySlug } from '../data/airportData';
+import affiliates from '../config/affiliates';
+import { SeoHead } from '../components/SeoHead';
 
 export default function AirportPage() {
   const { code } = useParams();
@@ -19,7 +21,12 @@ export default function AirportPage() {
   const isTexas = airport.type === 'texas';
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={`${airport.name} (${airport.iata}) — Airport Guide`}
+        description={`Flight tips, top routes, transport options, and insider advice for ${airport.name} in ${airport.city}. Budget travel starts here.`}
+        image={airport.heroImage}
+      />
       {/* Hero */}
       <div className="relative h-56 md:h-64 overflow-hidden">
         <img src={airport.heroImage} alt={airport.name} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -74,7 +81,7 @@ export default function AirportPage() {
                       </td>
                       <td className="p-3 border border-gray-200">
                         <a
-                          href={`https://www.kiwi.com/en/search/results/${airport.iata}/anywhere/anytime/anytime`}
+                          href={affiliates.kiwi.home}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-600 font-medium text-xs hover:underline"
@@ -254,6 +261,6 @@ export default function AirportPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

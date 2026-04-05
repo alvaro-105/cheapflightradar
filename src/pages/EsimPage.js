@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EsimCTA, EsimComparisonTable, FlightCTA, HotelCTA } from '../components/Affiliates';
 import { findEsimBySlug } from '../data/esimData';
+import { SeoHead } from '../components/SeoHead';
 
 export default function EsimPage() {
   const { slug } = useParams();
@@ -18,7 +19,12 @@ export default function EsimPage() {
   }
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={`Best eSIM for ${country.country} 2026`}
+        description={`Get connected in ${country.country} without roaming fees. Compare eSIM plans from Airalo — starting from $${country.plans[0]?.price.toFixed(2)} for ${country.plans[0]?.data}.`}
+        image={country.heroImage}
+      />
       {/* Hero */}
       <div className="relative h-72 md:h-96 overflow-hidden">
         <img src={country.heroImage} alt={country.country} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -172,6 +178,6 @@ export default function EsimPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

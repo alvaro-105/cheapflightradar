@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheapFlightRadar Twitter Banners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #065f46 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .banner-section {
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .banner-title {
+            font-size: 24px;
+            color: #10b981;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .banner-preview {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .instructions {
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .instructions h2 {
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .instructions ol {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        @keyframes radar-scan {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ CheapFlightRadar Twitter Banners</h1>
+        <p class="subtitle">Professional banners ready to download - Perfect size for Twitter/X (1500x500)</p>
+
+        <!-- Banner 1: Main Brand Banner -->
+        <div class="banner-section">
+            <div class="banner-title">Option 1: Main Brand Banner (Recommended)</div>
+            <div class="banner-preview">
+                <svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg" id="banner1">
+                    <!-- Dark gradient background -->
+                    <defs>
+                        <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+                        </linearGradient>
+                        
+                        <!-- Glow effect -->
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <rect width="1500" height="500" fill="url(#bgGrad1)"/>
+                    
+                    <!-- Radar circles (decorative background) -->
+                    <g opacity="0.1">
+                        <circle cx="1200" cy="250" r="300" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle cx="1200" cy="250" r="250" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle cx="1200" cy="250" r="200" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle cx="1200" cy="250" r="150" fill="none" stroke="#10b981" stroke-width="2"/>
+                    </g>
+                    
+                    <!-- Left side: Radar icon -->
+                    <g transform="translate(150, 250)">
+                        <!-- Radar circles -->
+                        <circle r="80" fill="none" stroke="#10b981" stroke-width="3" opacity="0.3"/>
+                        <circle r="60" fill="none" stroke="#10b981" stroke-width="3" opacity="0.5"/>
+                        <circle r="40" fill="none" stroke="#10b981" stroke-width="3" opacity="0.7"/>
+                        
+                        <!-- Radar sweep -->
+                        <line x1="0" y1="0" x2="0" y2="-80" stroke="#10b981" stroke-width="3" opacity="0.6"/>
+                        
+                        <!-- Center dot -->
+                        <circle r="8" fill="#10b981"/>
+                        
+                        <!-- Airplane -->
+                        <g transform="translate(0, -50)">
+                            <path d="M0,-12 L3,-9 L7,-9 L3,-6 L7,-2 L3,-2 L0,5 L-3,-2 L-7,-2 L-3,-6 L-7,-9 L-3,-9 Z" 
+                                  fill="#10b981" filter="url(#glow)"/>
+                        </g>
+                    </g>
+                    
+                    <!-- Main text -->
+                    <text x="350" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+                          fill="#10b981" filter="url(#glow)">CheapFlightRadar</text>
+                    
+                    <text x="350" y="260" font-family="Arial, sans-serif" font-size="32" font-weight="normal" 
+                          fill="#cbd5e1">Your Flight Deal Detection System</text>
+                    
+                    <!-- City tags -->
+                    <g transform="translate(350, 310)">
+                        <rect width="120" height="40" rx="8" fill="#10b981" opacity="0.2"/>
+                        <text x="60" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" 
+                              fill="#10b981" text-anchor="middle">🌮 Austin</text>
+                    </g>
+                    
+                    <g transform="translate(490, 310)">
+                        <rect width="130" height="40" rx="8" fill="#10b981" opacity="0.2"/>
+                        <text x="65" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" 
+                              fill="#10b981" text-anchor="middle">🚀 Houston</text>
+                    </g>
+                    
+                    <g transform="translate(640, 310)">
+                        <rect width="110" height="40" rx="8" fill="#10b981" opacity="0.2"/>
+                        <text x="55" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" 
+                              fill="#10b981" text-anchor="middle">🏈 Dallas</text>
+                    </g>
+                    
+                    <g transform="translate(770, 310)">
+                        <rect width="160" height="40" rx="8" fill="#10b981" opacity="0.2"/>
+                        <text x="80" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="600" 
+                              fill="#10b981" text-anchor="middle">🌵 San Antonio</text>
+                    </g>
+                    
+                    <!-- Bottom tagline -->
+                    <text x="350" y="400" font-family="Arial, sans-serif" font-size="24" font-weight="600" 
+                          fill="#64748b">Save 40-70% • Always Scanning • Never Miss a Deal</text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadBanner('banner1', 'CheapFlightRadar-Twitter-Banner-1.png')">
+                📥 Download Banner 1 (1500x500)
+            </button>
+        </div>
+
+        <!-- Banner 2: Minimalist Design -->
+        <div class="banner-section">
+            <div class="banner-title">Option 2: Minimalist Design</div>
+            <div class="banner-preview">
+                <svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg" id="banner2">
+                    <defs>
+                        <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <rect width="1500" height="500" fill="url(#bgGrad2)"/>
+                    
+                    <!-- Large radar visualization on right -->
+                    <g transform="translate(1150, 250)" opacity="0.15">
+                        <circle r="350" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle r="280" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle r="210" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle r="140" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle r="70" fill="none" stroke="#10b981" stroke-width="2"/>
+                    </g>
+                    
+                    <!-- Left content -->
+                    <g transform="translate(100, 250)">
+                        <!-- Brand name -->
+                        <text x="0" y="-60" font-family="Arial, sans-serif" font-size="64" font-weight="bold" 
+                              fill="#10b981">CheapFlightRadar</text>
+                        
+                        <!-- Tagline -->
+                        <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" font-weight="normal" 
+                              fill="#cbd5e1">24/7 Flight Deal Detection from Texas Airports</text>
+                        
+                        <!-- Stats -->
+                        <g transform="translate(0, 60)">
+                            <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+                                  fill="#10b981">1,247 Routes Monitored</text>
+                            <text x="0" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+                                  fill="#10b981">40-70% Savings</text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadBanner('banner2', 'CheapFlightRadar-Twitter-Banner-2.png')">
+                📥 Download Banner 2 (1500x500)
+            </button>
+        </div>
+
+        <!-- Banner 3: Bold Statement -->
+        <div class="banner-section">
+            <div class="banner-title">Option 3: Bold Statement Design</div>
+            <div class="banner-preview">
+                <svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg" id="banner3">
+                    <defs>
+                        <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#065f46;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+                        </linearGradient>
+                        
+                        <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <rect width="1500" height="500" fill="url(#bgGrad3)"/>
+                    
+                    <!-- Radar grid pattern (background) -->
+                    <g opacity="0.08">
+                        <line x1="0" y1="250" x2="1500" y2="250" stroke="#10b981" stroke-width="1"/>
+                        <line x1="750" y1="0" x2="750" y2="500" stroke="#10b981" stroke-width="1"/>
+                        <circle cx="750" cy="250" r="200" fill="none" stroke="#10b981" stroke-width="1"/>
+                        <circle cx="750" cy="250" r="150" fill="none" stroke="#10b981" stroke-width="1"/>
+                        <circle cx="750" cy="250" r="100" fill="none" stroke="#10b981" stroke-width="1"/>
+                    </g>
+                    
+                    <!-- Main headline -->
+                    <text x="750" y="180" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+                          fill="url(#textGrad)" text-anchor="middle">STOP OVERPAYING</text>
+                    
+                    <text x="750" y="260" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+                          fill="url(#textGrad)" text-anchor="middle">FOR FLIGHTS</text>
+                    
+                    <!-- Subtitle -->
+                    <text x="750" y="330" font-family="Arial, sans-serif" font-size="32" font-weight="normal" 
+                          fill="#cbd5e1" text-anchor="middle">We scan prices 24/7 so you don't have to</text>
+                    
+                    <!-- Brand at bottom -->
+                    <g transform="translate(750, 410)">
+                        <circle r="12" fill="#10b981"/>
+                        <text x="25" y="8" font-family="Arial, sans-serif" font-size="24" font-weight="600" 
+                              fill="#10b981">CheapFlightRadar.com</text>
+                    </g>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadBanner('banner3', 'CheapFlightRadar-Twitter-Banner-3.png')">
+                📥 Download Banner 3 (1500x500)
+            </button>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2>📱 How to Upload to Twitter/X</h2>
+            <ol>
+                <li><strong>Choose your favorite banner</strong> above and download it</li>
+                <li>Go to <strong>twitter.com</strong> (or x.com) and log in</li>
+                <li>Click on your <strong>Profile</strong> picture</li>
+                <li>Click <strong>"Edit profile"</strong></li>
+                <li>Click on the <strong>header image</strong> area (the big banner at top)</li>
+                <li>Select <strong>"Upload photo"</strong></li>
+                <li>Choose the PNG file you downloaded</li>
+                <li>Adjust positioning if needed (drag to reposition)</li>
+                <li>Click <strong>"Save"</strong></li>
+            </ol>
+        </div>
+
+        <div class="instructions" style="margin-top: 30px;">
+            <h2>✅ Which Banner Should You Use?</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(100, 116, 139, 0.3);">
+                    <strong>Banner 1 (Main Brand):</strong> ⭐ RECOMMENDED - Shows your logo, brand name, all 4 Texas cities, and tagline. Professional and complete.
+                </li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(100, 116, 139, 0.3);">
+                    <strong>Banner 2 (Minimalist):</strong> Clean, modern look. Shows stats (1,247 routes monitored). Great if you like simple designs.
+                </li>
+                <li style="padding: 10px 0;">
+                    <strong>Banner 3 (Bold Statement):</strong> Eye-catching headline "STOP OVERPAYING FOR FLIGHTS". Great for attention-grabbing marketing.
+                </li>
+            </ul>
+            <p style="margin-top: 20px; color: #10b981; font-weight: 600;">
+                💡 Pro Tip: Banner 1 is the best all-around choice - it shows everything important about your brand!
+            </p>
+        </div>
+
+        <div class="instructions" style="margin-top: 30px;">
+            <h2>📐 Banner Specs</h2>
+            <ul style="list-style: none; padding-left: 0; color: #cbd5e1;">
+                <li style="padding: 5px 0;">✅ Size: 1500 x 500 pixels (perfect for Twitter/X)</li>
+                <li style="padding: 5px 0;">✅ Format: PNG (high quality)</li>
+                <li style="padding: 5px 0;">✅ Aspect Ratio: 3:1</li>
+                <li style="padding: 5px 0;">✅ File Size: Optimized for fast loading</li>
+                <li style="padding: 5px 0;">✅ Safe Zone: All important content is within safe viewing area</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function downloadBanner(bannerId, filename) {
+            const svg = document.getElementById(bannerId);
+            
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1500;
+            canvas.height = 500;
+            
+            // Convert SVG to data URL
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, 1500, 500);
+                
+                // Download
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = filename;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(url);
+                }, 'image/png', 1.0);
+            };
+            img.src = url;
+        }
+    </script>
+</body>
+</html>

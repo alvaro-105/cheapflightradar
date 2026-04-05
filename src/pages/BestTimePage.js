@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA, HotelCTA, EsimCTA } from '../components/Affiliates';
 import { findBestTimeBySlug } from '../data/bestTimeData';
+import { SeoHead } from '../components/SeoHead';
 
 const ratingColors = {
   5: 'bg-emerald-500',
@@ -30,7 +31,12 @@ export default function BestTimePage() {
   const priceRange = maxPrice - minPrice;
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title={`Best Time to Visit ${data.destination}`}
+        description={`Month-by-month guide to visiting ${data.destination}. Flight prices, weather ratings, crowd levels, and the cheapest months to fly. Plan smarter.`}
+        image={data.heroImage}
+      />
       {/* Hero */}
       <div className="relative h-56 md:h-72 overflow-hidden">
         <img src={data.heroImage} alt={data.destination} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
@@ -176,6 +182,6 @@ export default function BestTimePage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

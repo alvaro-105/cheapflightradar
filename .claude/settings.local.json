@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developers.kiwi.com)",
+      "WebFetch(domain:support.travelpayouts.com)",
+      "Bash(node -e:*)",
+      "Bash(curl:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Read(//Users/alvaro/**)",
+      "Bash(command -v node npm yarn pnpm)",
+      "Bash(/usr/local/bin/node --version)",
+      "Bash(rm -rf /Users/alvaro/Desktop/cheapflightradar/.git/worktrees)",
+      "Bash(git -C /Users/alvaro/Desktop/cheapflightradar status)",
+      "Bash(GIT_DIR=/Users/alvaro/Desktop/cheapflightradar/.git GIT_WORK_TREE=/Users/alvaro/Desktop/cheapflightradar git status)",
+      "Bash(env)",
+      "Bash(/usr/bin/git -C /Users/alvaro/Desktop/cheapflightradar status)",
+      "Bash(git version:*)",
+      "Bash(git -C /Users/alvaro/Desktop/cheapflightradar log --oneline -5)",
+      "Bash(git add:*)",
+      "Bash(git -C /Users/alvaro/Desktop/cheapflightradar diff --cached --stat)",
+      "Bash(git -C:*)",
+      "WebFetch(domain:cheapflightradar.com)",
+      "Bash(vercel ls:*)",
+      "Bash(gh repo:*)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(npm run:*)",
+      "Bash(/usr/local/bin/node node_modules/.bin/react-scripts build)",
+      "Bash(CI=true /usr/local/bin/node node_modules/.bin/react-scripts build)",
+      "Bash(/usr/local/bin/node -e \":*)",
+      "Bash(wait)",
+      "Bash(CI=false npm run build)",
+      "Bash(CI=false /usr/local/bin/npm run build)",
+      "Bash(ls /usr/local/bin/node*)",
+      "Bash(ls ~/.nvm/versions/node/*/bin/node)",
+      "Bash(export PATH=\"/usr/local/bin:$PATH\")",
+      "Bash(CI=false node /usr/local/bin/node_modules/.bin/react-scripts build)",
+      "Bash(CI=false node_modules/.bin/react-scripts build)"
+    ]
+  }
+}

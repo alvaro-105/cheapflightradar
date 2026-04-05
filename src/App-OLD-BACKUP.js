@@ -231,7 +231,7 @@ const HomePage = ({ onDealClick }) => {
         topTips: [
           'CTA train from airport is $5 vs $50+ Uber',
           'Chicago Architecture Boat Tour is a must-do',
-          'Deep dish pizza: Lou Malnati\'s or Pequod\'s',
+          "Deep dish pizza: Lou Malnati's or Pequod"s',
           'Millennium Park and Cloud Gate (The Bean) are free',
           'Navy Pier has free fireworks Wednesday & Saturday nights'
         ]

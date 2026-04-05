@@ -388,7 +388,7 @@ const blogPosts = [
     category: 'destination-guide',
     categoryLabel: 'Destination Guide',
     image:
-      'https://images.unsplash.com/photo-1583699838927-e7bec9e8568e?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?w=1200&q=80',
     publishedAt: '2026-04-04',
     readTime: '7 min read',
     featured: true,

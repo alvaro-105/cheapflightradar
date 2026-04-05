@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SeoHead } from '../components/SeoHead';
 import esimData from '../data/esimData';
 import destinationData from '../data/destinationData';
 import routeData from '../data/routeData';
@@ -14,7 +15,11 @@ import affiliates from '../config/affiliates';
 // ─────────────────────────────────────────────────────────────
 export function EsimIndexPage() {
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="eSIM Country Guides"
+        description="Country-by-country eSIM guides with real pricing from Airalo. Stay connected abroad without roaming fees. Plans from $4, works in 200+ countries."
+      />
       {/* Hero */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -91,7 +96,7 @@ export function EsimIndexPage() {
         {/* Bottom CTA */}
         <EsimCTA variant="hero" />
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -119,7 +124,11 @@ export function DestinationIndexPage() {
     : destinationData.filter((d) => regionMap[d.country] === filter);
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="Destination Guides"
+        description="In-depth travel guides for budget travelers. Real costs, neighborhoods, and honest tips for destinations across Latin America, Europe, and Asia."
+      />
       <div className="bg-gradient-to-br from-blue-600 to-indigo-700 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-blue-200 font-semibold mb-2 text-sm uppercase tracking-wide">Explore the World</p>
@@ -182,7 +191,7 @@ export function DestinationIndexPage() {
               {/* Destination recommendation → Kiwi affiliate link */}
               <div className="px-4 pb-4">
                 <a
-                  href={affiliates.kiwi.search('texas', dest.bestTo || dest.city)}
+                  href={affiliates.kiwi.search(dest.city, dest.bestTo || dest.city)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center bg-blue-600 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -196,7 +205,7 @@ export function DestinationIndexPage() {
 
         <FlightCTA />
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -224,7 +233,11 @@ export function FlightsIndexPage() {
     : routeData.filter((r) => r.origin.iata === originFilter);
 
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="International Flight Routes"
+        description="Flight prices, airlines, and booking tips for popular international routes from major US airports. Find cheap fares and book smart."
+      />
       <div className="bg-gradient-to-br from-sky-600 to-blue-700 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sky-200 font-semibold mb-2 text-sm uppercase tracking-wide">Budget Routes</p>
@@ -286,7 +299,7 @@ export function FlightsIndexPage() {
 
         <FlightCTA />
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -295,7 +308,11 @@ export function FlightsIndexPage() {
 // ─────────────────────────────────────────────────────────────
 export function CostsIndexPage() {
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="Trip Cost Calculators"
+        description="Honest daily budget breakdowns for popular destinations. Backpacker, mid-range, and comfortable travel costs — real numbers, no fluff."
+      />
       <div className="bg-gradient-to-br from-amber-500 to-orange-600 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-amber-100 font-semibold mb-2 text-sm uppercase tracking-wide">Know Before You Go</p>
@@ -346,7 +363,7 @@ export function CostsIndexPage() {
 
         <FlightCTA />
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -355,7 +372,11 @@ export function CostsIndexPage() {
 // ─────────────────────────────────────────────────────────────
 export function BestTimeIndexPage() {
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="Best Time to Visit"
+        description="Month-by-month guides with flight prices, weather ratings, and crowd levels. Travel when it's smart, not when everyone else does."
+      />
       <div className="bg-gradient-to-br from-violet-600 to-purple-700 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-violet-200 font-semibold mb-2 text-sm uppercase tracking-wide">Timing is Everything</p>
@@ -426,7 +447,7 @@ export function BestTimeIndexPage() {
 
         <FlightCTA />
       </div>
-    </div>
+    </main>
   );
 }
 
@@ -435,7 +456,11 @@ export function BestTimeIndexPage() {
 // ─────────────────────────────────────────────────────────────
 export function AirportsIndexPage() {
   return (
-    <div className="bg-white">
+    <main id="main-content" className="bg-white">
+      <SeoHead
+        title="Airport Guides"
+        description="Complete guides for major airports: routes, airlines, lounges, transport options, and practical tips for budget travelers."
+      />
       <div className="bg-gradient-to-br from-slate-700 to-gray-800 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-slate-300 font-semibold mb-2 text-sm uppercase tracking-wide">Your Departure Points</p>
@@ -507,6 +532,6 @@ export function AirportsIndexPage() {
 
         <FlightCTA />
       </div>
-    </div>
+    </main>
   );
 }
