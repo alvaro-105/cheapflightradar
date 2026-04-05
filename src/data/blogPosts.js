@@ -4,6 +4,382 @@
 
 const blogPosts = [
   {
+    id: 10,
+    slug: 'airalo-review-2026',
+    title: 'Airalo Review 2026: Is It Still the Best eSIM for International Travel?',
+    excerpt:
+      "We tested Airalo across 8 countries — Mexico, Colombia, Japan, Spain, and more. Here's what worked, what to watch out for, and whether it's worth it for Texas travelers.",
+    category: 'budget-tips',
+    categoryLabel: 'Budget Tips',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80',
+    publishedAt: '2026-04-05',
+    readTime: '8 min read',
+    featured: false,
+    tags: ['eSIM', 'Airalo', 'Travel Tech', 'Budget Travel', 'Connectivity'],
+    content: [
+      {
+        type: 'lead',
+        text: "If you've ever paid $10/day for international roaming on your US carrier, you already know the pain. Airalo's eSIM marketplace has been around since 2019, but 2026 is arguably its best year yet — more countries, more operators, and significantly better prices. We've tested it extensively across Latin America, Europe, and Asia.",
+      },
+      { type: 'h2', text: 'What is Airalo?' },
+      {
+        type: 'p',
+        text: "Airalo is a marketplace that sells eSIM data plans from local carriers around the world. Instead of paying your US carrier $10–15/day for international data (or hunting for a physical SIM at an airport kiosk), you scan a QR code and get a local data plan on your existing phone — no SIM swap required. The whole process takes about 2 minutes.",
+      },
+      {
+        type: 'callout',
+        title: 'What is an eSIM?',
+        text: 'An eSIM is a digital SIM card built into most iPhones (X and later) and modern Android phones. It runs alongside your regular US SIM — your US number stays active for calls and texts, while the eSIM handles your data at local rates.',
+      },
+      { type: 'h2', text: 'How Much Can You Actually Save?' },
+      {
+        type: 'p',
+        text: "The math is stark. A week in Mexico City on AT&T's international day pass costs $70 ($10/day). An Airalo eSIM with 3GB for 15 days costs $9. That's a saving of $61 on a single trip. For a two-week Europe trip, the difference between a carrier day pass and an Airalo eSIM is $120–150.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Mexico (3 GB / 15 days): $9 on Airalo vs. $70 carrier roaming for a week',
+          'Japan (5 GB / 30 days): $14 on Airalo vs. $140 pocket WiFi rental for 2 weeks',
+          'Europe regional (10 GB / 30 days): $22 on Airalo vs. $140 carrier day pass',
+          'Colombia (3 GB / 15 days): $10 on Airalo vs. $100 carrier for 10 days',
+        ],
+      },
+      { type: 'h2', text: 'Our Real-World Test Results' },
+      {
+        type: 'p',
+        text: "We've used Airalo across Mexico City, Cancún, Medellín, Tokyo, Barcelona, and Lisbon over the past year. Here's what we actually experienced:",
+      },
+      { type: 'h3', text: 'Mexico — Excellent' },
+      {
+        type: 'p',
+        text: "Airalo's Telcel-backed plans in Mexico are consistently reliable. In Mexico City (2,240m altitude + 22 million people), signal was solid throughout Roma Norte, Centro Histórico, and even in the Metro tunnels. Cancún and Playa del Carmen: excellent coverage. Oaxaca: good in the city, weak in the mountain villages. The $9 plan for 3GB/15 days is the standout value.",
+      },
+      { type: 'h3', text: 'Japan — Outstanding' },
+      {
+        type: 'p',
+        text: "Japan is where Airalo really shines. We got an IIJmio-backed plan (uses Docomo's network — Japan's best) for $14 for 5GB/30 days. Coverage was perfect: Tokyo Metro, Shinkansen, Kyoto temples, even on the hiking trail up to Hakone. Japan's own network quality is so good that we never once had a complaint. This is the #1 recommendation if you're visiting Japan.",
+      },
+      { type: 'h3', text: 'Europe — Great Value, Choose Plans Wisely' },
+      {
+        type: 'p',
+        text: "Airalo offers two types of Europe plans: country-specific (e.g., Spain only) and regional (covers 30+ EU/EEA countries). If you're staying in one country, country-specific plans are cheaper. Multi-country trips — Barcelona + Lisbon + Rome — buy the Europe regional plan. The Orange-backed plans in France and Spain are fast and reliable.",
+      },
+      { type: 'h3', text: 'Colombia — Solid' },
+      {
+        type: 'p',
+        text: "Medellín coverage was strong throughout El Poblado, Laureles, and on the Metrocable system. Some gaps in rural coffee region (Salento, Manizales) as expected. The Claro-backed plans had the widest coverage. Bogotá and Cartagena: no issues.",
+      },
+      { type: 'h2', text: 'Things to Watch Out For' },
+      {
+        type: 'ul',
+        items: [
+          "Data-only plans: Airalo eSIMs don't include a local phone number — they're data only. Use WhatsApp, FaceTime (WiFi calling), or iMessage for calls.",
+          'Top-up costs: If you run out of data mid-trip, you can buy more in the Airalo app — but it\'s slightly more expensive than buying upfront. Estimate generously.',
+          'Activation: You can install the eSIM days before your trip but should activate it after landing (or on the plane). Read the activation instructions carefully.',
+          'Compatibility: Airalo requires an unlocked phone with eSIM support. Check before you buy. Most iPhones from X onward and flagship Androids from 2020+ are compatible.',
+          'Hot spot sharing: Some Airalo plans don\'t allow sharing your eSIM connection as a hot spot. Check the plan details before buying if you need to tether a laptop.',
+        ],
+      },
+      { type: 'h2', text: 'Airalo vs. Saily vs. Buying a Local SIM' },
+      {
+        type: 'p',
+        text: "Saily (by Nord) is Airalo's main competitor. Prices are similar, and Saily has better-designed apps in some regions. For Latin America, Airalo has more plan options. For Europe and Asia, they're roughly equal. Both are good choices — we default to Airalo because of its wider country coverage.",
+      },
+      {
+        type: 'p',
+        text: "Local SIMs from airport kiosks are sometimes even cheaper — Telcel in Mexico, Viettel in Vietnam. The tradeoff: you need to find the kiosk, wait in line, show your passport, and potentially navigate a language barrier. An eSIM you activate from your couch the night before is worth a few extra dollars.",
+      },
+      { type: 'h2', text: 'Bottom Line' },
+      {
+        type: 'p',
+        text: "Airalo is the best eSIM marketplace for most international travelers. The pricing is transparent, the app is easy to use, and coverage across Latin America, Europe, and Asia is consistently solid. For Texas travelers heading to Mexico, Colombia, Japan, Spain, or most other international destinations — it's the single best way to cut your international connectivity costs.",
+      },
+      {
+        type: 'callout',
+        title: 'Get Started',
+        text: 'Use our Airalo affiliate link to get your eSIM. First-time users get a discount through our link. Plans start at $4 for basic coverage and go up to $35 for unlimited plans in high-cost markets.',
+      },
+    ],
+  },
+
+  {
+    id: 9,
+    slug: 'esim-vs-roaming-texas-travelers',
+    title: 'eSIM vs. International Roaming: The Real Cost Comparison for Texas Travelers',
+    excerpt:
+      "Your carrier's international day pass costs $10. A local eSIM for Mexico costs $9 for 15 days. The math is brutal — and most travelers still don't know about eSIMs.",
+    category: 'budget-tips',
+    categoryLabel: 'Budget Tips',
+    image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=1200&q=80',
+    publishedAt: '2026-04-04',
+    readTime: '6 min read',
+    featured: false,
+    tags: ['eSIM', 'Roaming', 'Budget Travel', 'Travel Tech', 'Mexico'],
+    content: [
+      {
+        type: 'lead',
+        text: "Here's a scenario that plays out thousands of times a day: a Texas family lands in Cancún, turns off airplane mode, and their carrier automatically starts charging $10/day per phone for international data. Seven days later, they're home with a $280 surprise on their phone bill — for what should have been a solved problem.",
+      },
+      { type: 'h2', text: 'What the Carriers Actually Charge' },
+      {
+        type: 'p',
+        text: "All four major US carriers now offer international day passes — a flat fee for each day you use data abroad. On AT&T and Verizon, it's $10/day per line. On T-Mobile Magenta plans, you get unlimited data at throttled 128kbps speeds (painfully slow) with 5GB of high-speed data for $5/day if you want full speeds. These prices are presented as 'convenient,' but they're actually one of the most expensive ways to stay connected internationally.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'AT&T International Day Pass: $10/day per line',
+          'Verizon TravelPass: $10/day per line',
+          'T-Mobile International (throttled): included, but agonizingly slow',
+          'T-Mobile High-Speed Add-On: $5/day for usable speeds',
+          'A family of 4 on AT&T for 7 days in Mexico: $280 extra on your bill',
+        ],
+      },
+      { type: 'h2', text: 'What an eSIM Actually Costs' },
+      {
+        type: 'p',
+        text: "For comparison, here's what the same trip costs with an Airalo eSIM:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Mexico eSIM: 3GB for 15 days = $9 per person',
+          'Japan eSIM: 5GB for 30 days = $14 per person',
+          'Europe regional eSIM (30+ countries): 10GB for 30 days = $22 per person',
+          'Colombia eSIM: 3GB for 15 days = $10 per person',
+          'Thailand eSIM: 5GB for 15 days = $8 per person',
+        ],
+      },
+      {
+        type: 'callout',
+        title: 'The Savings on a Family Trip to Mexico',
+        text: 'Carrier roaming for 4 people × 7 days at $10/day = $280. Airalo eSIMs for 4 people at $9 each = $36. Net savings: $244. That\'s two extra nights at a nice hotel, or a day trip to Chichen Itzá for the whole family.',
+      },
+      { type: 'h2', text: 'But Wait — What About T-Mobile\'s Free International Data?' },
+      {
+        type: 'p',
+        text: "T-Mobile Magenta and above plans include 'free' international data — at a throttled speed of 128kbps. To put that in perspective: streaming video requires at least 1,500kbps (1.5Mbps). At 128kbps, Google Maps takes 30+ seconds to load a map tile. It's barely functional for basic navigation, completely useless for anything else. T-Mobile's $5/day high-speed add-on bumps speeds to usable levels, but that's still $35/week per person.",
+      },
+      { type: 'h2', text: 'How to Switch: The 2-Minute Setup' },
+      {
+        type: 'ol',
+        items: [
+          'Check compatibility: Your phone must be unlocked and eSIM-capable. iPhones XS/XR and later, most flagship Androids from 2020+.',
+          'Visit Airalo.com and select your destination country.',
+          'Choose a plan (3GB / 15 days is the most popular for Mexico).',
+          'Purchase — you\'ll get a QR code via email.',
+          'Scan the QR code to install the eSIM (Settings → Mobile/Cellular → Add eSIM on iPhone).',
+          'Keep the eSIM in \'Off\' mode until you land. Then enable it and disable your US carrier\'s cellular data for the trip.',
+          'Your US number stays active for calls/texts. The eSIM handles data.',
+        ],
+      },
+      { type: 'h2', text: 'The One Thing to Get Right' },
+      {
+        type: 'p',
+        text: "The most common mistake: forgetting to turn off your US carrier's data roaming when you land. Even with an eSIM active, if your US line's 'Data Roaming' is still on, your carrier can charge you. Go to Settings → Cellular on iPhone and make sure only your eSIM line is enabled for data. Takes 30 seconds and saves you from a nasty surprise.",
+      },
+      {
+        type: 'p',
+        text: "The second most common mistake: buying too little data. 1GB sounds like a lot but can disappear in a day if you use maps, post on Instagram, and stream music. For a week-long trip with typical usage, 3GB is comfortable. Heavy users should get 5GB.",
+      },
+    ],
+  },
+
+  {
+    id: 8,
+    slug: 'best-esim-japan-2026',
+    title: 'Best eSIM for Japan 2026: Everything You Need to Know Before You Land',
+    excerpt:
+      "Japan has world-class mobile coverage — but foreign SIM cards aren't sold at every corner. A Japan eSIM from Airalo costs $14 and beats every pocket WiFi option. Here's everything you need.",
+    category: 'budget-tips',
+    categoryLabel: 'Budget Tips',
+    image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&q=80',
+    publishedAt: '2026-04-03',
+    readTime: '7 min read',
+    featured: false,
+    tags: ['eSIM', 'Japan', 'Tokyo', 'Travel Tech', 'Asia'],
+    content: [
+      {
+        type: 'lead',
+        text: "Japan is one of the best countries in the world to visit — and one of the best to stay connected in. The mobile network is exceptional. But navigating Japan with no data is a genuine nightmare: the train system is complex, Google Maps is essential, and most restaurant menus are in Japanese. Here's exactly how to set up data before you land.",
+      },
+      { type: 'h2', text: 'Why Japan Needs a Different Strategy' },
+      {
+        type: 'p',
+        text: "For years, the standard advice for Japan was to rent a pocket WiFi device at the airport — a small router that you carry around and connects all your devices. But pocket WiFi has significant downsides: it costs $8–12/day, you share the bandwidth across your group (causing slowdowns), you need to keep it charged, and you MUST return it at a specific airport counter before departure or face a penalty. In 2026, eSIMs make pocket WiFi completely obsolete.",
+      },
+      { type: 'h2', text: 'The Best Japan eSIM Plans (April 2026)' },
+      {
+        type: 'p',
+        text: "Airalo offers several Japan plans through IIJmio (which runs on Docomo's network — the best in Japan). Here's the lineup:",
+      },
+      {
+        type: 'ul',
+        items: [
+          '3GB / 15 days: $9 — good for a 1-week trip with moderate use',
+          '5GB / 30 days: $14 — the sweet spot, covers a 2-week Japan circuit',
+          '10GB / 30 days: $22 — for heavy users or content creators',
+          'Unlimited* / 30 days: $35 — speed capped at 1Mbps after 3GB/day',
+        ],
+      },
+      {
+        type: 'callout',
+        title: 'Our Recommendation',
+        text: "Get the 5GB / 30-day plan at $14. Most 2-week Japan trips use 3–4GB — the extra buffer is worth the marginal cost. You won't run out, and you won't spend mental energy monitoring usage.",
+      },
+      { type: 'h2', text: 'Coverage in Japan: What to Expect' },
+      {
+        type: 'p',
+        text: "Japan's network quality is genuinely extraordinary. IIJmio uses Docomo, which has the deepest coverage in the country:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Tokyo Metro and JR train network: excellent signal including most tunnels',
+          'Shinkansen (bullet trains): solid coverage between cities, brief gaps in long tunnels',
+          'Kyoto temple districts: perfect',
+          'Hakone mountain area: good, some gaps on high ridgelines',
+          'Osaka, Hiroshima, Nara: excellent',
+          'Rural areas (e.g., Shirakawa-go): decent signal in villages, weaker in between',
+        ],
+      },
+      { type: 'h2', text: 'Setting Up Your Japan eSIM' },
+      {
+        type: 'ol',
+        items: [
+          'Buy on Airalo.com 1–2 days before departure.',
+          'Install the eSIM at home via QR code (Settings → Cellular → Add eSIM on iPhone).',
+          'Label it "Japan" so you know which is which.',
+          'Keep it disabled until the plane lands.',
+          'When the wheels touch down at Narita (NRT) or Haneda (HND), enable the Japan eSIM and disable your US carrier\'s data.',
+          'You\'re connected before you reach immigration. No hunting for a SIM kiosk.',
+        ],
+      },
+      { type: 'h2', text: 'Japan Travel Apps That Need Your Data' },
+      {
+        type: 'p',
+        text: "Having a working eSIM in Japan isn't just about staying connected — these apps are genuinely essential for navigating the country:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Google Maps: works perfectly for train navigation, walking directions, and restaurant discovery.',
+          'Hyperdia or Japan Transit Planner: for complex train route planning including fare optimization.',
+          'Google Translate with camera mode: point your camera at any Japanese menu or sign — instant translation.',
+          'Suica/Pasmo (Apple Wallet): Add a virtual IC transit card to your iPhone wallet — tap to pay for Metro, trains, and convenience stores.',
+          'Tabelog: Japan\'s version of Yelp. Japanese-language but Google Translate handles it.',
+        ],
+      },
+      { type: 'h2', text: 'Pocket WiFi vs. eSIM: Final Verdict' },
+      {
+        type: 'p',
+        text: "Pocket WiFi made sense when phones couldn't have eSIMs. In 2026, it's an inferior option on every dimension: more expensive, more cumbersome, requires return at the airport, and creates a single point of failure for your whole group if the device battery dies. Get an eSIM. $14 for 5GB is less than a ramen bowl in Tokyo.",
+      },
+    ],
+  },
+
+  {
+    id: 7,
+    slug: 'esim-guide-texas-travelers',
+    title: "The Texas Traveler's Guide to eSIMs: Never Pay Roaming Fees Again",
+    excerpt:
+      "Everything you need to know about eSIMs — what they are, which phones support them, the best apps to use, and why they're the single best money-saving tool for international travelers.",
+    category: 'budget-tips',
+    categoryLabel: 'Budget Tips',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80',
+    publishedAt: '2026-04-02',
+    readTime: '9 min read',
+    featured: true,
+    tags: ['eSIM', 'Budget Travel', 'Travel Tech', 'International', 'Mexico'],
+    content: [
+      {
+        type: 'lead',
+        text: "You just landed in Cancún, turned off airplane mode, and your carrier just started charging you $10/day for international data. It didn't have to be this way. eSIMs have changed international connectivity completely — and most US travelers still don't know about them.",
+      },
+      { type: 'h2', text: 'What is an eSIM?' },
+      {
+        type: 'p',
+        text: "An eSIM (embedded SIM) is a digital SIM card built into your phone. Unlike a physical SIM card — that little chip you swap in and out — an eSIM is already inside your device. You activate it remotely by scanning a QR code or entering a code in an app. The entire process takes about 2 minutes.",
+      },
+      {
+        type: 'p',
+        text: "The key insight for travelers: you can have MULTIPLE eSIMs on your phone simultaneously, and you can switch between them. This means you keep your US number (and phone plan) active for calls and texts back home, while using a cheap local eSIM for data abroad. Your phone is essentially running two plans at once.",
+      },
+      { type: 'h2', text: 'Does My Phone Support eSIM?' },
+      {
+        type: 'p',
+        text: "Most modern smartphones from 2019 onward support eSIM. Here's the breakdown:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'iPhone XS / XR (2018) and all later models — eSIM supported',
+          'iPhone 14 and later (US models) — eSIM only, no physical SIM slot',
+          'Samsung Galaxy S20 and later — eSIM supported',
+          'Google Pixel 3 and later — eSIM supported',
+          'Most flagship Android phones from 2020+ — check manufacturer spec page',
+        ],
+      },
+      {
+        type: 'callout',
+        title: 'Check if Your Phone is Unlocked',
+        text: "eSIMs require an unlocked phone. If you bought your phone directly from Apple or Google (not from AT&T, Verizon, or T-Mobile), it's likely unlocked. If you bought it through a carrier, check Settings → General → About → Carrier Lock (iPhone) or contact your carrier. After 12 months, most carriers will unlock your phone for free.",
+      },
+      { type: 'h2', text: 'The Best eSIM Apps for Texas Travelers' },
+      { type: 'h3', text: 'Airalo — Our #1 Pick' },
+      {
+        type: 'p',
+        text: "Airalo is the world's largest eSIM marketplace, covering 200+ countries. Plans start at $4 and go up to $35. The app is clean, setup is fast, and coverage is excellent. For Texas travelers, Airalo's Mexico, Colombia, Spain, and Japan plans are the ones you'll use most. Our affiliate link gives first-time users a discount.",
+      },
+      { type: 'h3', text: 'Saily (by Nord)' },
+      {
+        type: 'p',
+        text: "Saily is Airalo's strongest competitor and a reliable alternative. Coverage is similar in most regions. Prices are slightly different — sometimes Saily wins, sometimes Airalo does. Worth checking both for your specific destination.",
+      },
+      { type: 'h2', text: 'Real Cost Comparison: eSIM vs. Carrier' },
+      {
+        type: 'ul',
+        items: [
+          'AT&T International Day Pass: $10/day. Week in Mexico = $70',
+          'Airalo Mexico eSIM (3GB / 15 days): $9 total',
+          'Carrier for a family of 4, one week: $280',
+          'Airalo for a family of 4: $36',
+          'Savings for the family: $244 — that\'s two extra nights at a beach hotel',
+        ],
+      },
+      { type: 'h2', text: 'Setting Up Your eSIM: Step by Step' },
+      {
+        type: 'ol',
+        items: [
+          'Buy your eSIM plan 1-2 days before departure (gives you time to troubleshoot if anything goes wrong).',
+          'Install the eSIM via QR code: Settings → Cellular → Add eSIM on iPhone.',
+          'Give it a label like "Mexico" or "Japan" so you know which is which.',
+          'Leave it disabled until you\'re on the plane or at the destination.',
+          'When you land: enable the travel eSIM, then go to Settings → Cellular → Cellular Data and make sure your travel eSIM is selected (not your US line).',
+          'Also disable "Data Roaming" on your US line to avoid accidental charges.',
+        ],
+      },
+      { type: 'h2', text: 'Pro Tips for Using eSIMs' },
+      {
+        type: 'ul',
+        items: [
+          'Your US phone number stays active: calls and texts to your US number still work (your carrier may charge per-minute for calls from abroad, but texts are usually free or very cheap on most plans).',
+          'WhatsApp and FaceTime use your data, not the US line — so calls home are essentially free through those apps.',
+          'If you\'re in a country for more than 30 days, buy a 30-day plan. It\'s much cheaper than buying multiple 7-day plans.',
+          'Regional plans (like Airalo\'s Europe plan) are cheaper than buying individual country plans if you\'re crossing borders.',
+          'Top up before you run out: if you buy more data mid-trip, it\'s slightly more expensive. Overestimate your usage.',
+        ],
+      },
+      { type: 'h2', text: 'Which Destinations Need an eSIM Most?' },
+      {
+        type: 'p',
+        text: "Everywhere, but especially: Japan (where airport SIM lines are long and pocket WiFi is overpriced), Europe (where day passes add up fast), and countries in Southeast Asia and South America where local data is cheap but tourist-oriented plans are expensive. For Mexico — so close to Texas and so heavily visited — it's almost irresponsible not to have an eSIM when the savings are this obvious.",
+      },
+    ],
+  },
+
+  {
     id: 6,
     slug: 'medellin-colombia-guide',
     title: "Medellín, Colombia: Why It's the Best Budget Destination for Texans Right Now",

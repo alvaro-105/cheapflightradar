@@ -20,8 +20,28 @@ import {
   TrendingDown,
   ChevronRight,
   Mail,
+  Wifi,
+  DollarSign,
+  Calendar,
+  PlaneTakeoff,
 } from 'lucide-react';
 import blogPosts from './data/blogPosts';
+
+// ── New section page imports ──────────────────────────────────
+import EsimPage from './pages/EsimPage';
+import DestinationPage from './pages/DestinationPage';
+import RoutePage from './pages/RoutePage';
+import CostPage from './pages/CostPage';
+import BestTimePage from './pages/BestTimePage';
+import AirportPage from './pages/AirportPage';
+import {
+  EsimIndexPage,
+  DestinationIndexPage,
+  FlightsIndexPage,
+  CostsIndexPage,
+  BestTimeIndexPage,
+  AirportsIndexPage,
+} from './pages/SectionIndexes';
 
 // ==================== SUBSCRIBE HOOK ====================
 const useSubscribe = () => {
@@ -356,7 +376,11 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { to: '/', label: 'Home' },
+    { to: '/flights', label: 'Flights' },
+    { to: '/destinations', label: 'Destinations' },
+    { to: '/esim', label: 'eSIM' },
+    { to: '/trip-costs', label: 'Trip Costs' },
+    { to: '/airports', label: 'Airports' },
     { to: '/blog', label: 'Blog' },
     { to: '/about', label: 'About' },
   ];
@@ -455,49 +479,33 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h4 className="text-white font-semibold text-sm mb-4">Content</h4>
+          <h4 className="text-white font-semibold text-sm mb-4">Explore</h4>
           <ul className="space-y-2.5 text-sm">
-            <li>
-              <Link to="/blog" className="hover:text-white transition-colors">
-                All Posts
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog?category=budget-tips"
-                className="hover:text-white transition-colors"
-              >
-                Budget Tips
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog?category=destination-guide"
-                className="hover:text-white transition-colors"
-              >
-                Destination Guides
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:text-white transition-colors">
-                About
-              </Link>
-            </li>
+            <li><Link to="/flights" className="hover:text-white transition-colors">Flight Routes</Link></li>
+            <li><Link to="/destinations" className="hover:text-white transition-colors">Destination Guides</Link></li>
+            <li><Link to="/esim" className="hover:text-white transition-colors">eSIM Guides</Link></li>
+            <li><Link to="/trip-costs" className="hover:text-white transition-colors">Trip Cost Calculator</Link></li>
+            <li><Link to="/best-time" className="hover:text-white transition-colors">Best Time to Visit</Link></li>
+            <li><Link to="/airports" className="hover:text-white transition-colors">Airport Guides</Link></li>
+            <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+            <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="text-white font-semibold text-sm mb-4">Texas Airports</h4>
           <ul className="space-y-2 text-sm">
             {[
-              'Austin (AUS)',
-              'Houston Intercontinental (IAH)',
-              'Houston Hobby (HOU)',
-              'Dallas / Fort Worth (DFW)',
-              'San Antonio (SAT)',
+              { label: 'Dallas / Fort Worth (DFW)', slug: 'dfw' },
+              { label: 'Houston Intercontinental (IAH)', slug: 'iah' },
+              { label: 'Houston Hobby (HOU)', slug: 'hou' },
+              { label: 'Austin (AUS)', slug: 'aus' },
+              { label: 'San Antonio (SAT)', slug: 'sat' },
             ].map((a) => (
-              <li key={a} className="flex items-center gap-2">
-                <MapPin size={11} className="text-emerald-500 flex-shrink-0" />
-                {a}
+              <li key={a.label}>
+                <Link to={`/airports/${a.slug}`} className="flex items-center gap-2 hover:text-white transition-colors">
+                  <MapPin size={11} className="text-emerald-500 flex-shrink-0" />
+                  {a.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -586,52 +594,48 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* Sections grid */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">What We Cover</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Everything You Need to Plan Your Trip</h2>
           <p className="text-gray-500 text-center text-sm mb-10">
-            Practical content for real travelers
+            From flight prices to eSIMs — practical tools for real travelers
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link
-              to="/blog?category=budget-tips"
-              className="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-md hover:border-emerald-200 transition-all duration-200"
-            >
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors duration-200">
-                <TrendingDown
-                  size={22}
-                  className="text-emerald-600 group-hover:text-white transition-colors duration-200"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Budget Tips</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                How to travel more for less — flight deal strategies, credit card points, timing
-                tactics, and tools that actually work.
-              </p>
-              <div className="mt-5 text-emerald-600 font-medium text-sm flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-200">
-                Explore tips <ArrowRight size={14} />
-              </div>
-            </Link>
-            <Link
-              to="/blog?category=destination-guide"
-              className="group bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all duration-200"
-            >
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors duration-200">
-                <MapPin
-                  size={22}
-                  className="text-blue-600 group-hover:text-white transition-colors duration-200"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Destination Guides</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                In-depth guides to the world's best destinations — where to eat, stay, what to do,
-                and how to budget from Texas airports.
-              </p>
-              <div className="mt-5 text-blue-600 font-medium text-sm flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-200">
-                Explore guides <ArrowRight size={14} />
-              </div>
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { to: '/flights', icon: PlaneTakeoff, color: 'blue', label: 'Flight Routes', desc: 'Price data and booking tips for every major Texas → international route.' },
+              { to: '/destinations', icon: MapPin, color: 'indigo', label: 'Destination Guides', desc: 'In-depth guides with real costs, neighborhoods, and itineraries.' },
+              { to: '/esim', icon: Wifi, color: 'emerald', label: 'eSIM Guides', desc: 'Skip roaming fees. Get a local data plan from $4 before you board.' },
+              { to: '/trip-costs', icon: DollarSign, color: 'amber', label: 'Trip Cost Calculator', desc: 'Honest daily budgets: backpacker, mid-range, and comfortable travel.' },
+              { to: '/best-time', icon: Calendar, color: 'violet', label: 'Best Time to Visit', desc: 'Month-by-month flight prices, weather, and crowd data.' },
+              { to: '/blog?category=budget-tips', icon: TrendingDown, color: 'rose', label: 'Budget Tips', desc: 'Flight strategies, credit card hacks, and timing tactics.' },
+            ].map(({ to, icon: Icon, color, label, desc }) => {
+              const colorMap = {
+                blue: { bg: 'bg-blue-100', icon: 'text-blue-600', hover: 'hover:border-blue-200', link: 'text-blue-600' },
+                indigo: { bg: 'bg-indigo-100', icon: 'text-indigo-600', hover: 'hover:border-indigo-200', link: 'text-indigo-600' },
+                emerald: { bg: 'bg-emerald-100', icon: 'text-emerald-600', hover: 'hover:border-emerald-200', link: 'text-emerald-600' },
+                amber: { bg: 'bg-amber-100', icon: 'text-amber-600', hover: 'hover:border-amber-200', link: 'text-amber-600' },
+                violet: { bg: 'bg-violet-100', icon: 'text-violet-600', hover: 'hover:border-violet-200', link: 'text-violet-600' },
+                rose: { bg: 'bg-rose-100', icon: 'text-rose-600', hover: 'hover:border-rose-200', link: 'text-rose-600' },
+              };
+              const c = colorMap[color];
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  className={`group bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md ${c.hover} transition-all duration-200`}
+                >
+                  <div className={`w-11 h-11 ${c.bg} rounded-xl flex items-center justify-center mb-4`}>
+                    <Icon size={20} className={c.icon} />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{label}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                  <div className={`mt-4 ${c.link} font-medium text-sm flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-200`}>
+                    Explore <ArrowRight size={13} />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -902,10 +906,37 @@ const App = () => (
       <Header />
       <div className="flex-1">
         <Routes>
+          {/* Core pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/about" element={<AboutPage />} />
+
+          {/* eSIM section */}
+          <Route path="/esim" element={<EsimIndexPage />} />
+          <Route path="/esim/:slug" element={<EsimPage />} />
+
+          {/* Destinations section */}
+          <Route path="/destinations" element={<DestinationIndexPage />} />
+          <Route path="/destinations/:slug" element={<DestinationPage />} />
+
+          {/* Flight routes section */}
+          <Route path="/flights" element={<FlightsIndexPage />} />
+          <Route path="/flights/:slug" element={<RoutePage />} />
+
+          {/* Trip costs section */}
+          <Route path="/trip-costs" element={<CostsIndexPage />} />
+          <Route path="/trip-costs/:slug" element={<CostPage />} />
+
+          {/* Best time section */}
+          <Route path="/best-time" element={<BestTimeIndexPage />} />
+          <Route path="/best-time/:slug" element={<BestTimePage />} />
+
+          {/* Airport guides section */}
+          <Route path="/airports" element={<AirportsIndexPage />} />
+          <Route path="/airports/:code" element={<AirportPage />} />
+
+          {/* Fallback */}
           <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
