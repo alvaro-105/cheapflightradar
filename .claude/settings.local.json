@@ -35,7 +35,14 @@
       "Bash(ls ~/.nvm/versions/node/*/bin/node)",
       "Bash(export PATH=\"/usr/local/bin:$PATH\")",
       "Bash(CI=false node /usr/local/bin/node_modules/.bin/react-scripts build)",
-      "Bash(CI=false node_modules/.bin/react-scripts build)"
+      "Bash(CI=false node_modules/.bin/react-scripts build)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(node_modules/.bin/react-scripts build:*)",
+      "Bash(/usr/local/bin/npm run:*)",
+      "Bash(/usr/local/bin/node /usr/local/bin/npm run build)",
+      "Bash(PATH=\"/usr/local/bin:$PATH\" /usr/local/bin/node /usr/local/lib/node_modules/react-scripts/bin/react-scripts.js build)",
+      "Bash(PATH=\"/usr/local/bin:$PATH\" /usr/local/bin/node ./node_modules/.bin/react-scripts build)"
     ]
   }
 }

@@ -18,7 +18,7 @@ export default function AirportPage() {
     );
   }
 
-  const isTexas = airport.type === 'texas';
+  const isUS = airport.type === 'us';
 
   return (
     <main id="main-content" className="bg-white">
@@ -51,8 +51,8 @@ export default function AirportPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-        {/* Texas airport: top routes */}
-        {isTexas && airport.topRoutes && (
+        {/* US airport: top routes */}
+        {isUS && airport.topRoutes && (
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Top International Routes from {airport.iata}</h2>
             <div className="overflow-x-auto">
@@ -132,10 +132,10 @@ export default function AirportPage() {
         {/* Transport */}
         <div className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            {isTexas ? 'Getting To/From the Airport' : 'Getting from the Airport to the City'}
+            {isUS ? 'Getting To/From the Airport' : 'Getting from the Airport to the City'}
           </h2>
 
-          {isTexas && airport.transport ? (
+          {isUS && airport.transport ? (
             <div className="space-y-3">
               {Object.entries(airport.transport).map(([key, t]) => (
                 <div key={key} className="border border-gray-100 rounded-xl p-4">
@@ -185,7 +185,7 @@ export default function AirportPage() {
         )}
 
         {/* Lounges (Texas airports) */}
-        {isTexas && airport.lounges && airport.lounges.length > 0 && (
+        {isUS && airport.lounges && airport.lounges.length > 0 && (
           <div className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-3">Airport Lounges</h2>
             <div className="space-y-3">
@@ -202,7 +202,7 @@ export default function AirportPage() {
         )}
 
         {/* Parking (Texas airports) */}
-        {isTexas && airport.transport?.parking && (
+        {isUS && airport.transport?.parking && (
           <div className="mb-8 bg-amber-50 border border-amber-100 rounded-xl p-5">
             <h2 className="text-xl font-bold text-gray-900 mb-3">Parking at {airport.iata}</h2>
             <div className="space-y-2 text-sm">
@@ -222,7 +222,7 @@ export default function AirportPage() {
         )}
 
         {/* Customs (international) */}
-        {!isTexas && airport.customs && (
+        {!isUS && airport.customs && (
           <div className="mb-8 p-4 bg-blue-50 rounded-xl">
             <h3 className="font-bold text-gray-900 mb-2">Customs & Immigration</h3>
             <p className="text-gray-700 text-sm">{airport.customs}</p>
@@ -233,7 +233,7 @@ export default function AirportPage() {
         {airport.tips && (
           <div className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
-              {isTexas ? `Tips for Flying from ${airport.iata}` : `Tips for Arriving at ${airport.iata}`}
+              {isUS ? `Tips for Flying from ${airport.iata}` : `Tips for Arriving at ${airport.iata}`}
             </h2>
             <ul className="space-y-3">
               {airport.tips.map((tip, i) => (
