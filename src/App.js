@@ -895,12 +895,12 @@ const AboutPage = () => (
         </a>
         {' '}for eSIMs and{' '}
         <a
-          href="https://www.trip.com/t/hbb4IghIiT2"
+          href="https://www.tkqlhce.com/click-101689576-12639039"
           target="_blank"
           rel="noopener noreferrer"
           className="text-emerald-600 font-semibold hover:underline"
         >
-          Trip.com
+          Expedia
         </a>
         {' '}for hotels. These are affiliate links — we earn a small commission if you book,
         at no extra cost to you.

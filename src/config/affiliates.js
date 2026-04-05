@@ -54,13 +54,13 @@ export const affiliates = {
   expedia: {
     name: 'Expedia',
     tagline: 'Flights, hotels, and vacation packages.',
-    hotels: 'https://www.kqzyfj.com/click-101689576-15488923',
+    hotels: 'https://www.tkqlhce.com/click-101689576-12639039',
     packages: 'https://www.dpbolvw.net/click-101689576-13364951',
     us: 'https://www.tkqlhce.com/click-101689576-12639039',
-    home: 'https://www.kqzyfj.com/click-101689576-15488923',
-    search: () => 'https://www.kqzyfj.com/click-101689576-15488923',
+    home: 'https://www.tkqlhce.com/click-101689576-12639039',
+    search: () => 'https://www.tkqlhce.com/click-101689576-12639039',
     cta: 'Find Hotels on Expedia',
-    note: 'Bundle flights + hotel for extra savings',
+    note: 'Compare hotels and bundle with flights for extra savings',
   },
 };
 

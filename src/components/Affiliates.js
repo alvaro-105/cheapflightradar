@@ -52,14 +52,14 @@ export function FlightCTA({ origin, dest, originLabel, destLabel, variant = 'def
 }
 
 // ─────────────────────────────────────────────
-//  HotelCTA  — links to Trip.com
+//  HotelCTA  — links to Expedia
 // ─────────────────────────────────────────────
 export function HotelCTA({ city, variant = 'default' }) {
-  const url = affiliates.trip.hotels;
+  const url = affiliates.expedia.hotels;
 
   const label = city
-    ? `Find Hotels in ${city} on Trip.com`
-    : affiliates.trip.cta;
+    ? `Find Hotels in ${city} on Expedia`
+    : affiliates.expedia.cta;
 
   if (variant === 'inline') {
     return (
@@ -83,7 +83,7 @@ export function HotelCTA({ city, variant = 'default' }) {
             Find Hotels{city ? ` in ${city}` : ''}
           </p>
           <p className="text-amber-700 text-sm mb-3">
-            {affiliates.trip.note}
+            {affiliates.expedia.note}
           </p>
           <a
             href={url}
