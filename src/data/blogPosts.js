@@ -103,6 +103,7 @@ const blogPosts = [
         text: 'Use our Airalo affiliate link to get your eSIM. First-time users get a discount through our link. Plans start at $4 for basic coverage and go up to $35 for unlimited plans in high-cost markets.',
       },
       { type: 'cta-esim' },
+      { type: 'cta-saily' },
     ],
   },
 
@@ -188,6 +189,7 @@ const blogPosts = [
         text: "The second most common mistake: buying too little data. 1GB sounds like a lot but can disappear in a day if you use maps, post on Instagram, and stream music. For a week-long trip with typical usage, 3GB is comfortable. Heavy users should get 5GB.",
       },
       { type: 'cta-esim' },
+      { type: 'cta-saily' },
     ],
   },
 
@@ -283,6 +285,7 @@ const blogPosts = [
         text: "Pocket WiFi made sense when phones couldn't have eSIMs. In 2026, it's an inferior option on every dimension: more expensive, more cumbersome, requires return at the airport, and creates a single point of failure for your whole group if the device battery dies. Get an eSIM. $14 for 5GB is less than a ramen bowl in Tokyo.",
       },
       { type: 'cta-esim', country: 'Japan' },
+      { type: 'cta-saily' },
       { type: 'cta-flight', destLabel: 'Japan' },
     ],
   },
@@ -387,6 +390,7 @@ const blogPosts = [
         text: "Everywhere, but especially: Japan (where airport SIM lines are long and pocket WiFi is overpriced), Europe (where day passes add up fast), and countries in Southeast Asia and South America where local data is cheap but tourist-oriented plans are expensive. For Mexico especially — one of the most visited destinations in the world — it's almost irresponsible not to have an eSIM when the savings are this obvious.",
       },
       { type: 'cta-esim' },
+      { type: 'cta-saily' },
     ],
   },
 
