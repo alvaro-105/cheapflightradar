@@ -929,7 +929,8 @@ const BlogPostPage = () => {
 
 // ==================== AUTHOR BIO ====================
 const AUTHOR = {
-  name: 'Alvaro',
+  name: 'Alvaro Cajina',
+  handle: 'alvaro105',
   title: 'Programmer, traveler, and the guy who finds the cheap flight.',
   photo: null, // swap in a URL when ready, e.g. 'https://...'
   bio: [
@@ -960,13 +961,17 @@ const AuthorBio = ({ compact = false }) => (
     <div className="flex-1 min-w-0">
       {compact ? (
         <>
-          <p className="font-bold text-gray-900 text-base leading-tight">{AUTHOR.name}</p>
+          <p className="font-bold text-gray-900 text-base leading-tight">
+            {AUTHOR.name} <span className="text-gray-400 font-normal">· {AUTHOR.handle}</span>
+          </p>
           <p className="text-xs text-gray-500 mt-0.5 mb-2">{AUTHOR.title}</p>
           <p className="text-sm text-gray-600 leading-relaxed">{AUTHOR.bio[0]}</p>
         </>
       ) : (
         <>
-          <p className="font-bold text-gray-900 text-xl mb-0.5">{AUTHOR.name}</p>
+          <p className="font-bold text-gray-900 text-xl mb-0.5">
+            {AUTHOR.name} <span className="text-gray-400 font-normal text-base">· {AUTHOR.handle}</span>
+          </p>
           <p className="text-sm text-emerald-600 font-medium mb-4">{AUTHOR.title}</p>
           <div className="space-y-3">
             {AUTHOR.bio.map((p, i) => (
@@ -983,8 +988,8 @@ const AuthorBio = ({ compact = false }) => (
 const AboutPage = () => (
   <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-24">
     <SeoHead
-      title="About CheapFlightRadar — Alvaro"
-      description="I'm Alvaro, a Costa Rican programmer living in Austin. I travel as much as I can and share everything I've learned about doing it without going broke."
+      title="About — Alvaro Cajina (alvaro105)"
+      description="I'm Alvaro Cajina (alvaro105) — a Costa Rican programmer living in Austin. I travel as much as I can and share everything I've learned about doing it without going broke."
     />
     <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-4">About</p>
     <h1 className="text-4xl font-bold text-gray-900 mb-10 leading-tight">
