@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import { findCostBySlug } from '../data/costData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -174,6 +175,12 @@ export default function CostPage() {
             </Link>
           </div>
         )}
+
+        {/* Author */}
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
 
         {/* Back */}
         <div className="mt-8 pt-6 border-t border-gray-100">

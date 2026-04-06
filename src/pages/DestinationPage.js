@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import { findDestinationBySlug } from '../data/destinationData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -270,6 +271,12 @@ export default function DestinationPage() {
             <ExpediaCTA destLabel={dest.city} />
             <EsimProvidersCTA country={dest.country} countrySlug={dest.airaloSlug} />
           </div>
+        </div>
+
+        {/* Author */}
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
         </div>
 
         {/* Back link */}

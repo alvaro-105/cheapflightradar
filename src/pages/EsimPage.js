@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EsimProvidersCTA, EsimComparisonTable, FlightCTA, HotelCTA, ExpediaCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import { findEsimBySlug } from '../data/esimData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -172,8 +173,14 @@ export default function EsimPage() {
         <HotelCTA city={country.topDestinations[0] || country.country} />
         <ExpediaCTA destLabel={country.country} />
 
+        {/* Author */}
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
+
         {/* Back link */}
-        <div className="mt-10 pt-6 border-t border-gray-100">
+        <div className="mt-8 pt-6 border-t border-gray-100">
           <Link to="/esim" className="text-emerald-600 font-semibold hover:underline">
             ← View all eSIM country guides
           </Link>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import { findRouteBySlug } from '../data/routeData';
 import affiliates from '../config/affiliates';
 import { SeoHead } from '../components/SeoHead';
@@ -162,6 +163,12 @@ export default function RoutePage() {
           >
             {route.origin.name} ({route.origin.iata}) airport guide →
           </Link>
+        </div>
+
+        {/* Author */}
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
         </div>
 
         {/* Back */}

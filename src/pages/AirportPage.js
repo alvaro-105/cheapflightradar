@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FlightCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import { findAirportBySlug } from '../data/airportData';
 import affiliates from '../config/affiliates';
 import { SeoHead } from '../components/SeoHead';
@@ -253,6 +254,12 @@ export default function AirportPage() {
             <p className="text-gray-700 text-sm">{airport.bestFor}</p>
           </div>
         )}
+
+        {/* Author */}
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
 
         {/* Back */}
         <div className="mt-8 pt-6 border-t border-gray-100">

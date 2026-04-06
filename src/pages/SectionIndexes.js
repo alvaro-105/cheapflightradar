@@ -8,6 +8,7 @@ import costData from '../data/costData';
 import bestTimeData from '../data/bestTimeData';
 import { usAirports, internationalAirports } from '../data/airportData';
 import { EsimProvidersCTA, FlightCTA } from '../components/Affiliates';
+import { AuthorBio } from '../components/AuthorBio';
 import affiliates from '../config/affiliates';
 
 // ─────────────────────────────────────────────────────────────
@@ -95,6 +96,10 @@ export function EsimIndexPage() {
 
         {/* Bottom CTA — both providers */}
         <EsimProvidersCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
@@ -204,6 +209,10 @@ export function DestinationIndexPage() {
         </div>
 
         <FlightCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
@@ -298,6 +307,10 @@ export function FlightsIndexPage() {
         </div>
 
         <FlightCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
@@ -362,6 +375,10 @@ export function CostsIndexPage() {
         </div>
 
         <FlightCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
@@ -446,6 +463,10 @@ export function BestTimeIndexPage() {
         </div>
 
         <FlightCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
@@ -531,6 +552,10 @@ export function AirportsIndexPage() {
         </div>
 
         <FlightCTA />
+        <div className="mt-10 pt-8 border-t border-gray-100">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Written by</p>
+          <AuthorBio compact />
+        </div>
       </div>
     </main>
   );
