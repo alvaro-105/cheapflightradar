@@ -388,7 +388,7 @@ const ContentRenderer = ({ content }) => (
         case 'cta-esim':
           return <EsimProvidersCTA key={i} country={block.country} countrySlug={block.countrySlug} />;
         case 'cta-saily':
-          return <EsimProvidersCTA key={i} />;
+          return null;
         case 'cta-flight':
           return <FlightCTA key={i} destLabel={block.destLabel} />;
         case 'cta-hotel':
