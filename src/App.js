@@ -931,7 +931,7 @@ const BlogPostPage = () => {
 const AUTHOR = {
   name: 'Alvaro Cajina',
   handle: 'alvaro105',
-  title: 'Programmer, traveler, and the guy who finds the cheap flight.',
+  title: 'Developer & travel blogger',
   photo: null, // swap in a URL when ready, e.g. 'https://...'
   bio: [
     "I'm Alvaro — born in Costa Rica (the coffee capital of the world, and somehow the one Costa Rican who doesn't drink the stuff). I've been living in Austin for the past 7 years, working as a programmer and slowly losing track of how many airports I've been through.",
@@ -962,7 +962,7 @@ const AuthorBio = ({ compact = false }) => (
       {compact ? (
         <>
           <p className="font-bold text-gray-900 text-base leading-tight">
-            {AUTHOR.name} <span className="text-gray-400 font-normal">· {AUTHOR.handle}</span>
+            {AUTHOR.name} <a href="https://alvaro105.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-normal hover:underline">· {AUTHOR.handle}</a>
           </p>
           <p className="text-xs text-gray-500 mt-0.5 mb-2">{AUTHOR.title}</p>
           <p className="text-sm text-gray-600 leading-relaxed">{AUTHOR.bio[0]}</p>
