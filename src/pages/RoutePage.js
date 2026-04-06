@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { HotelCTA, EsimProvidersCTA } from '../components/Affiliates';
+import { HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
 import { findRouteBySlug } from '../data/routeData';
 import affiliates from '../config/affiliates';
 import { SeoHead } from '../components/SeoHead';
@@ -135,8 +135,9 @@ export default function RoutePage() {
           </ul>
         </div>
 
-        {/* Hotel + eSIM CTAs */}
+        {/* Hotel + Package + eSIM CTAs */}
         <HotelCTA city={route.dest.city} />
+        <ExpediaCTA destLabel={route.dest.city} />
         <EsimProvidersCTA country={route.dest.country} />
 
         {/* Link to destination guide if available */}

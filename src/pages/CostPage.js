@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FlightCTA, HotelCTA, EsimProvidersCTA } from '../components/Affiliates';
+import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
 import { findCostBySlug } from '../data/costData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -145,6 +145,7 @@ export default function CostPage() {
 
         {/* Hotel CTA */}
         <HotelCTA city={data.destination} />
+        <ExpediaCTA destLabel={data.destination} />
 
         {/* Money tips */}
         <div className="mb-8">

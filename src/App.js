@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import blogPosts from './data/blogPosts';
 import { SeoHead } from './components/SeoHead';
-import { FlightCTA, HotelCTA, EsimProvidersCTA } from './components/Affiliates';
+import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from './components/Affiliates';
 
 // ── Page-level loading skeleton ───────────────────────────────
 const PageLoader = () => (
@@ -393,6 +393,8 @@ const ContentRenderer = ({ content }) => (
           return <FlightCTA key={i} destLabel={block.destLabel} />;
         case 'cta-hotel':
           return <HotelCTA key={i} city={block.city} />;
+        case 'cta-package':
+          return <ExpediaCTA key={i} destLabel={block.destLabel} />;
         default:
           return null;
       }

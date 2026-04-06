@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { EsimProvidersCTA, EsimComparisonTable, FlightCTA, HotelCTA } from '../components/Affiliates';
+import { EsimProvidersCTA, EsimComparisonTable, FlightCTA, HotelCTA, ExpediaCTA } from '../components/Affiliates';
 import { findEsimBySlug } from '../data/esimData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -168,8 +168,9 @@ export default function EsimPage() {
         {/* Bottom CTA — both providers */}
         <EsimProvidersCTA country={country.country} countrySlug={country.airaloSlug} />
 
-        {/* Hotels at the destination → Expedia */}
+        {/* Hotels at the destination */}
         <HotelCTA city={country.topDestinations[0] || country.country} />
+        <ExpediaCTA destLabel={country.country} />
 
         {/* Back link */}
         <div className="mt-10 pt-6 border-t border-gray-100">

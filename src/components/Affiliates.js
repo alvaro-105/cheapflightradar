@@ -281,6 +281,38 @@ export function EsimProvidersCTA({ country, countrySlug }) {
 }
 
 // ─────────────────────────────────────────────
+//  ExpediaCTA  — travel packages (flight + hotel bundles)
+// ─────────────────────────────────────────────
+export function ExpediaCTA({ destLabel }) {
+  const url = affiliates.expedia.packages;
+  const label = destLabel ? `Bundle Flight + Hotel to ${destLabel}` : 'Bundle Flight + Hotel on Expedia';
+
+  return (
+    <div className="bg-orange-50 border border-orange-200 rounded-xl p-5 my-6">
+      <div className="flex items-start gap-4">
+        <span className="text-3xl">🏖️</span>
+        <div className="flex-1">
+          <p className="font-semibold text-orange-900 text-lg mb-1">
+            Save More with a Travel Package
+          </p>
+          <p className="text-orange-700 text-sm mb-3">
+            Bundle your flight + hotel on Expedia and save up to 30% compared to booking separately.
+          </p>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-orange-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-colors"
+          >
+            {label} →
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
 //  TripCTA  — shows all 3 affiliate CTAs stacked
 // ─────────────────────────────────────────────
 export function TripCTA({ origin, dest, city, country, countrySlug, originLabel, destLabel }) {

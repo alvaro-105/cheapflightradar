@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FlightCTA, HotelCTA, EsimProvidersCTA } from '../components/Affiliates';
+import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
 import { findBestTimeBySlug } from '../data/bestTimeData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -159,8 +159,9 @@ export default function BestTimePage() {
           </ul>
         </div>
 
-        {/* Hotel recommendation → Expedia */}
+        {/* Hotel recommendation */}
         <HotelCTA city={data.destination} />
+        <ExpediaCTA destLabel={data.destination} />
 
         {/* eSIM — both providers */}
         <EsimProvidersCTA country={data.country} />

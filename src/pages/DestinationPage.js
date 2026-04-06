@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FlightCTA, HotelCTA, EsimProvidersCTA } from '../components/Affiliates';
+import { FlightCTA, HotelCTA, EsimProvidersCTA, ExpediaCTA } from '../components/Affiliates';
 import { findDestinationBySlug } from '../data/destinationData';
 import { SeoHead } from '../components/SeoHead';
 
@@ -267,6 +267,7 @@ export default function DestinationPage() {
           <div className="space-y-4">
             <FlightCTA dest={dest.bestTo} destLabel={dest.city} />
             <HotelCTA city={dest.city} />
+            <ExpediaCTA destLabel={dest.city} />
             <EsimProvidersCTA country={dest.country} countrySlug={dest.airaloSlug} />
           </div>
         </div>
