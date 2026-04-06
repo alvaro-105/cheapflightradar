@@ -559,7 +559,7 @@ const costData = [
     country: 'Costa Rica',
     destinationSlug: null,
     flag: '🇨🇷',
-    heroImage: 'https://images.unsplash.com/photo-1518259102261-b40117eabbc9?w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=1200&q=80',
     metaTitle: 'How Much Does Costa Rica Cost? 2026 Budget Breakdown',
     metaDesc: 'Real Costa Rica trip costs: flights, hotels, activities, and food. Budget $65–200/day. One of the pricier destinations in Central America — but worth every cent.',
     duration: '8 days / 7 nights',
