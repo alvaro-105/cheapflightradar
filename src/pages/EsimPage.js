@@ -105,12 +105,12 @@ export default function EsimPage() {
               <div className="text-red-500 font-bold text-sm mb-1">Carrier Roaming</div>
               <div className="text-xl font-bold text-gray-900">{country.vsCarrier.carrierCost}</div>
             </div>
-            <div className="bg-white rounded-lg p-4 text-center border-2 border-emerald-200">
-              <div className="text-emerald-600 font-bold text-sm mb-1">Airalo eSIM</div>
+            <div className="bg-white rounded-lg p-4 text-center border-2 border-violet-400">
+              <div className="text-violet-600 font-bold text-sm mb-1">⭐ Saily eSIM</div>
               <div className="text-xl font-bold text-gray-900">{country.vsCarrier.esimCost}</div>
             </div>
-            <div className="bg-white rounded-lg p-4 text-center border-2 border-violet-200">
-              <div className="text-violet-600 font-bold text-sm mb-1">Saily eSIM</div>
+            <div className="bg-white rounded-lg p-4 text-center border-2 border-emerald-200">
+              <div className="text-emerald-600 font-bold text-sm mb-1">Airalo eSIM</div>
               <div className="text-xl font-bold text-gray-900">~Same</div>
             </div>
           </div>
